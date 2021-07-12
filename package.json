@@ -1,0 +1,30 @@
+{
+  "name": "ts-koa-lite",
+  "version": "1.0.0",
+  "main": "src/app.ts",
+  "repository": "git@github.com:wommy/ts-koa-lite.git",
+  "author": "wommy <tom@technomad.media>",
+  "license": "MIT",
+  "scripts": {
+    "dep": "yarn add koa koa-router koa-body @leafac/html; yarn add -D typescript ts-node nodemon @types/node @types/koa @types/koa-router;",
+    "gitignore": "echo -e 'node_modules\ndist' >> .gitignore",
+    "tsci": "tsc --init --target es6 --allowJs --checkJs --outDir dist --rootDir src --moduleResolution node --strict false",
+    "init": "yarn run dep; yarn run gitignore; yarn run tsci",
+    "start": "tsc && node dist/app.js",
+    "start:dev": "nodemon src/app.ts"
+  },
+  "dependencies": {
+    "@leafac/html": "^3.0.0",
+    "koa": "^2.13.1",
+    "koa-body": "^4.2.0",
+    "koa-router": "^10.0.0"
+  },
+  "devDependencies": {
+    "@types/koa": "^2.13.4",
+    "@types/koa-router": "^7.4.3",
+    "@types/node": "^16.0.1",
+    "nodemon": "^2.0.10",
+    "ts-node": "^10.0.0",
+    "typescript": "^4.3.5"
+  }
+}
