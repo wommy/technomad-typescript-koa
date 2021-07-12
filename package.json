@@ -1,8 +1,8 @@
 {
-  "name": "ts-koa-lite",
+  "name": "technomad-typescripts-koa",
   "version": "1.0.0",
   "main": "src/app.ts",
-  "repository": "git@github.com:wommy/ts-koa-lite.git",
+  "repository": "git@github.com:wommy/technomad-typescripts-koa.git",
   "author": "wommy <tom@technomad.media>",
   "license": "MIT",
   "scripts": {
