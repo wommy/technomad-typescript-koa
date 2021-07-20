@@ -1,19 +1,21 @@
 import html, { HTML } from '@leafac/html'
+import { style as pageStyle } from './client/jegan'
 
-export const style = html`
+const style = html`
 main, header, section {
 	display: grid;
 	grid-gap: 1rem;
 }
 `
 
-export const form = html`
+export function form () { return html`
 	<form action="/" method="POST">
-		<input type="text" name="parent" placeholder="parent" required>
-		<input type="text" name="child" placeholder="child" required>
+		<input type="text" name="name" placeholder="parent" required>
+		<input type="text" name="quantity" placeholder="quantity" required>
+		<input type="text" name="ref" placeholder="ref" required>
 		<input type="submit" value="post">
 	</form>
-`
+`}
 
 export function layout (main:HTML):HTML { return html`
 <!DOCTYPE html>
@@ -28,7 +30,8 @@ export function layout (main:HTML):HTML { return html`
 	<link href="https://unpkg.com/tailwindcss@^2/dist/components.min.css" rel="stylesheet" />
 	<link href="https://unpkg.com/tailwindcss@^2/dist/utilities.min.css" rel="stylesheet" />
 	<style>
-		$${style}
+		$${ style }
+		$${ pageStyle }
 	</style>
 	<title>ts-koa-lite</title>
 </head>
